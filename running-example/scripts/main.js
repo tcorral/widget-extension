@@ -5,7 +5,6 @@ define(function (require, exports, module) {
     module.name = 'extended-widget';
 
     return function (widget) {
-        debugger;
         baseWidget(widget, module);
     };
 });
