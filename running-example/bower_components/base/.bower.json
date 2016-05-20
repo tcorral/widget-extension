@@ -1,0 +1,42 @@
+{
+  "name": "base",
+  "version": "3.0.3",
+  "authors": [
+    "dragosh <dragos@backbase.com>"
+  ],
+  "description": "Base library for creating Launchpad components/widgets/modules",
+  "main": "./scripts/main.js",
+  "moduleType": [
+    "umd"
+  ],
+  "keywords": [
+    "launchpad",
+    "base",
+    "foundation"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules"
+  ],
+  "dependencies": {
+    "angular": "~1.5.0",
+    "lodash": "^3.10.1",
+    "jquery": "^2.1.3"
+  },
+  "devDependencies": {
+    "config": "^3.0.0",
+    "angular-mocks": "~1.5.0"
+  },
+  "_release": "3.0.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "3.0.3",
+    "commit": "2ac2b6ae6febc248e23ba9b6f55f0dd940998a27"
+  },
+  "_source": "ssh://git@stash.backbase.com:7999/lpm/foundation-base.git",
+  "_target": "^3.0.3",
+  "_originalSource": "base",
+  "_direct": true
+}
