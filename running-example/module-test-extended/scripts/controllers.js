@@ -7,6 +7,7 @@ define(function (require, exports, module) {
         TestController.apply(this, arguments);
         vc.dummy = 'Dummy222';
         vc.other = 'Extended';
+        alert('ein');
     }
     
     exports.TestController = TestControllerExt;

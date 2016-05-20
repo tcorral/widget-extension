@@ -70,7 +70,55 @@ For developing locally without portal:
 - If you have not done it already, you should install [bb-lp-cli](https://github.com/Backbase/bb-lp-cli) tooling.
 - Execute ``bblp start``
 - Open [http://localhost:3000](http://localhost:3000)
-- You will see the 
+- The text you can see:
+	```
+	Dummy
+	```
+- Change the widget without touching the widget code:
+	- Change the view:
+		- Open the model.xml file
+		- Change the property value ```main:template``` to *other.html*
+		- Reload the page.
+		- Now you can see ```Dummy + manolo + tomas```
+	- Change the behaviour:
+		- Open the model.xml file
+		- Change the property name ```deps:module-test``` to ```deps:module-test-extended```
+		- Reload the page.
+		- Now you should see:
+			- An alert
+			- The text has changed:
+				- Before:
+				```
+				Dummy + manolo + tomas
+				```
+				- After:
+				```
+				Dummy222 + manolo + tomas
+				```
+	- Change the view and the behaviour:
+		- Open the model.xml file
+		- Change the property name ```deps:module-test``` to ```deps:module-test-extended```
+		- Change the property value ```main:module``` to ```module-test-extended```
+		- Change the property value ```main:template``` to *home.html*
+		- Reload the page.
+		- Now you should see:
+			- An alert
+			- The text has changed:
+				- Before: 
+				```
+				Dummy222 + manolo + tomas
+				```
+				- After: 
+				```
+				Dummy222 
+				Extended
+				```
 
 
+For developing using portal:
 
+- Requires to import modules
+- Requires to execute ```bb import-item``` each time you modify the model.xml.
+
+
+Enjoy it!

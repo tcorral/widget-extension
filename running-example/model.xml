@@ -24,11 +24,11 @@
             <property name="deps:core">
                 <value type="string"/>
             </property>
-            <property name="deps:module-test">
+            <property name="deps:module-test-extended">
                 <value type="string"/>
             </property>
             <property name="main:module">
-                <value type="string">module-test</value>
+                <value type="string">module-test-extended</value>
             </property>
             <property name="main:template">
                 <value type="string">home.html</value>
