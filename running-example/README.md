@@ -37,7 +37,7 @@ Managing all this together requires do some changes in the way we work.
 - Never again touch the code of widgets once they have been released.
 - Make easier change/extend behaviour.
 - Make easier change/extend view.
-- See at one sight what the dependencies of my widget are.
+- See at one sight what are the dependencies of my widget.
 - Do it as framework agnostic as possible.
 
 ## How we want to do that:
