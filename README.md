@@ -1,4 +1,4 @@
-# Test Widget Extension
+# Widget Extension
 
 Hi, if you have landed in this page is because you want to be more productive improving the reusability of your code.
 
