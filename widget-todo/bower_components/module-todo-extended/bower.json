@@ -1,0 +1,28 @@
+{
+  "name": "module-todo-extended",
+  "authors": [
+    "Tomas Corral <tomas@backbase.com>"
+  ],
+  "description": "Module Todo Extended",
+  "main": "scripts/main.js",
+  "keywords": [
+    "base",
+    "test"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "base": "^3.0.3",
+    "core": "^3.0.2",
+    "ui": "^3.0.7",
+    "config": "^3.5.3"
+  }
+}

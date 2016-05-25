@@ -1,0 +1,29 @@
+<catalog>
+    <widget>
+        <name>widget-todo-extended</name>
+        <extendedItemName>widget-todo</extendedItemName>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property name="title">
+                <value type="string">Widget Todo Extended</value>
+            </property>
+            <property name="deps:core">
+                <value type="string"/>
+            </property>
+            <property name="deps:module-todo-extended">
+                <value type="string"/>
+            </property>
+            <property name="main:module">
+                <value type="string">module-todo-extended</value>
+            </property>
+            <property name="main:template">
+                <value type="string">todo.html</value>
+            </property>
+        </properties>
+        <tags>
+            <tag type="regular">classroom</tag>
+            <tag type="regular">registration</tag>
+            <tag type="section">training</tag>
+        </tags>
+    </widget>
+</catalog>

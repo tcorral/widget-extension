@@ -13,9 +13,8 @@
             'base-widget': staticPath + modulesPath + 'base-widget/dist/scripts',
             'base-widget-ng': staticPath + modulesPath + 'base-widget-ng/dist/scripts',
             'module-todo': staticPath + modulesPath + 'module-todo/scripts',
-            'module-todo-path': staticPath + modulesPath + 'module-todo',
-            'module-todo-extended': staticPath + modulesPath + 'module-todo-extended/scripts',
-            'module-todo-extended-path': staticPath + modulesPath + 'module-todo-extended'
+            'module-todo-controllers': staticPath + modulesPath + 'module-todo/scripts/controllers',
+            'module-todo-extended': staticPath + modulesPath + 'module-todo-extended/scripts'
         },
         // Register packages
         packages: [

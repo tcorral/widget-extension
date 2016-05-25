@@ -1,9 +1,9 @@
 {
-  "name": "widget-extension",
+  "name": "widget-todo-extended",
   "authors": [
     "Tomas Corral <tomas@backbase.com>"
   ],
-  "description": "Extension test",
+  "description": "Widget Todo Extended",
   "main": "scripts/main.js",
   "keywords": [
     "extension",
@@ -20,11 +20,5 @@
     "tests"
   ],
   "dependencies": {},
-  "devDependencies": {
-    "theme-default": "^1.0.23",
-    "mock": "^1.2.0",
-    "jquery": "^2.2.4",
-    "base": "^3.0.3",
-    "core": "^3.0.2"
-  }
+  "devDependencies": {}
 }

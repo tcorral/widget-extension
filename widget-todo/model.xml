@@ -1,6 +1,6 @@
 <catalog>
     <widget>
-        <name>extension-test</name>
+        <name>widget-todo</name>
         <contextItemName>[BBHOST]</contextItemName>
         <properties>
             <property name="TemplateName">
@@ -24,17 +24,14 @@
             <property name="deps:core">
                 <value type="string"/>
             </property>
-            <property name="deps:module-todo-extended">
+            <property name="deps:module-todo">
                 <value type="string"/>
             </property>
             <property name="main:module">
-                <value type="string">module-todo-extended</value>
+                <value type="string">module-todo</value>
             </property>
             <property name="main:template">
                 <value type="string">todo.html</value>
-            </property>
-            <property name="skin:module-todo-extended">
-                <value type="string"/>
             </property>
         </properties>
         <tags>
