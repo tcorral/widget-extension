@@ -1,4 +1,4 @@
-# Test Widget Extension
+# Widget Extension
 
 Hi, if you have landed in this page is because you want to be more productive improving the reusability of your code.
 
@@ -90,7 +90,7 @@ For developing locally without portal:
 
 ### Add more features extending the logic and changing the view.
 - Open the model.xml file.
-- Change the property name ```deps:module-todo``` to ```deps:module-test-extended```
+- Change the property name ```deps:module-todo``` to ```deps:module-todo-extended```
 - Reload the page and see what has changed.
 ![TODO Extended Landing Page](./documentation/todo-extended-landing.png)
 - Type the title of your task.
