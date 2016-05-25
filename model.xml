@@ -33,12 +33,6 @@
             <property name="main:template">
                 <value type="string">todo.html</value>
             </property>
-            <!--<property name="region:link">-->
-                <!--<value type="string">link.html</value>-->
-            <!--</property>-->
-            <!--<property name="events:click .pepe">-->
-                <!--<value type="string">clickOnPepe</value>-->
-            <!--</property>-->
         </properties>
         <tags>
             <tag type="regular">classroom</tag>
