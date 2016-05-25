@@ -33,6 +33,9 @@
             <property name="main:template">
                 <value type="string">todo.html</value>
             </property>
+            <property name="skin:module-todo-extended">
+                <value type="string"/>
+            </property>
         </properties>
         <tags>
             <tag type="regular">classroom</tag>
