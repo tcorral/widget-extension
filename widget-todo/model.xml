@@ -7,7 +7,7 @@
                 <value type="string">Standard_Widget</value>
             </property>
             <property name="title">
-                <value type="string">Extension Test Widget</value>
+                <value type="string">Widget Todo Widget</value>
             </property>
             <property name="Description">
                 <value type="String" />
