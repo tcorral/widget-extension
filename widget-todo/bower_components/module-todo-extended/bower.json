@@ -1,9 +1,9 @@
 {
-  "name": "module-todo-extended",
+  "name": "module-test-extended",
   "authors": [
     "Tomas Corral <tomas@backbase.com>"
   ],
-  "description": "Module Todo Extended",
+  "description": "Extension test",
   "main": "scripts/main.js",
   "keywords": [
     "base",

@@ -1,10 +1,8 @@
-define(function (require, exports, module) {
-    
-    var angular = require('angular');
+import angular from 'angular';
+import controllers from './controllers';
 
-    var deps = [];
-    
-    module.name = 'module-todo';
+const deps = [];
 
-    module.exports = angular.module(module.name, deps).controller( require('./controllers') );
-});
+module.name = 'module-todo';
+
+module.exports = angular.module(modulen.name, deps).controller( controllers );

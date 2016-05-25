@@ -1,7 +1,7 @@
-define(function (require, exports, module) {
-    var baseWidget = require('base-widget-ng');
-    
-    return function (widget) {
-        baseWidget(widget, module);
-    }
-});
+import baseWidget from 'base-widget-ng';
+
+module.name = 'widget-todo-extended'; 
+
+export default function (widget) {
+    baseWidget(widget, module);
+};
