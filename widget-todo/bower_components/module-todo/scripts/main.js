@@ -5,4 +5,4 @@ const deps = [];
 
 module.name = 'module-todo';
 
-module.exports = angular.module(modulen.name, deps).controller( controllers );
+module.exports = angular.module(module.name, deps).controller( controllers );
