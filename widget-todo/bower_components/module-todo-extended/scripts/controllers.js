@@ -1,6 +1,5 @@
 define(function (require, exports, module) {
 
-    console.log('ein');
     var TodoController = require('../../module-todo/scripts/controllers').TodoController;
     
     //@ngInject

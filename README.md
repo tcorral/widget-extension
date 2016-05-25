@@ -71,6 +71,9 @@ What widget requires:
 	- Dependencies are added in the model.xml and read by the base-widget.
 	- Main Module and main template are added in the model.xml.
 	
+- Output data:
+	- 
+	
 ## Run example:
 
 For developing locally without portal:
