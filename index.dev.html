@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/xml; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- add theme -->
+    <link href="bower_components/theme-default/dist/styles/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="dist/styles/base.css" type="text/css"/>
+    <!-- add main libs only dev required -->
+    <script>window.requirejs || document.write("<script src='bower_components/requirejs/require.js'>\x3C/script>");</script>
+    <script>window.jQuery || document.write("<script src='bower_components/jquery/dist/jquery.js'>\x3C/script>");</script>
+    <script>window.angular || document.write("<script src='bower_components/angular/angular.js'>\x3C/script>");</script>
+    <script src="bower_components/config/requirejs.conf.js"></script>
+    <script type="text/javascript" src="bower_components/my-config/require.conf.js"></script>
+    <script>
+        require(['base', 'mock'], function (base, mock) {
+            window.b$ = {portal: mock.Portal()};
+            window.bd = mock.Bd();
+            window.launchpad = mock.launchpad;
+            window.gadgets = mock.gadgets;
+
+            mock.Widget({
+                preferences: {
+                    test: 10
+                }
+            })
+                    .then(function (__WIDGET__) {
+                        base.requireWidget(__WIDGET__, 'dist/scripts/main');
+                    });
+        });
+    </script>
+
+</head>
+
+<body class="extension-test">
+    <div ng-include="template"></div>
+</body>
+</html>
