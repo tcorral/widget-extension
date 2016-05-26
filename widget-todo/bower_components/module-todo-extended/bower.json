@@ -20,9 +20,6 @@
     "tests"
   ],
   "dependencies": {
-    "base": "^3.0.3",
-    "core": "^3.0.2",
-    "ui": "^3.0.7",
-    "config": "^3.5.3"
+    "module-todo": "../module-todo"
   }
 }
