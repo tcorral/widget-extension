@@ -12,46 +12,12 @@
     <script>window.angular || document.write("<script src='bower_components/angular/angular.js'>\x3C/script>");</script>
     <script src="bower_components/config/requirejs.conf.js"></script>
     <script type="text/javascript" src="bower_components/my-config/require.conf.js"></script>
-    <script type="text/javascript">
-        function injectHTML(widget) {
-            var staticPath = 'bower_components';
-            var modulesPath = '/';
-            var template = staticPath + modulesPath + widget.getPreference('main:module') + '/templates/' + widget.getPreference('main:template');
-            $.ajax({
-                        url: template,
-                        dataType: 'text'
-                    })
-                    .then(function (html) {
-                        widget.body.innerHTML = html;
-                    });
-        }
-    </script>
+    <script type="text/javascript" src="bower_components/my-config/local-config.js"></script>
     <script>
-        requirejs.config({
-            //By default load any module IDs from js/lib
-            baseUrl: '.',
-            paths: {
-                base: 'bower_components/base/dist/scripts',
-                mock: 'bower_components/mock/dist/scripts',
-                core: 'bower_components/core/dist/scripts',
-                lodash: 'bower_components/lodash/lodash.min',
-                moment: 'bower_components/moment/min/moment-with-locales.min',
-                'angular-dynamic-locale': 'bower_components/angular-dynamic-locale/dist/tmhDynamicLocale',
-                'angular-sanitize': 'bower_components/angular-sanitize/angular-sanitize.min',
-                'angular-resource': 'bower_components/angular-resource/angular-resource.min',
-                'angular-translate': 'bower_components/angular-translate/angular-translate.min'
-            },
-            packages: [
-                'base',
-                'mock',
-                'core'
-            ]
-        });
-
         require(['base', 'mock'], function (base, mock) {
             window.b$ = {portal: mock.Portal()};
             window.bd = mock.Bd();
-            //window.launchpad = mock.launchpad;
+            window.launchpad = mock.launchpad;
             window.gadgets = mock.gadgets;
 
             mock.Widget({
@@ -60,8 +26,7 @@
                         }
                     })
                     .then(function (__WIDGET__) {
-                        base.requireWidget(__WIDGET__, 'dist/scripts/main');
-                        injectHTML(__WIDGET__)
+                        base.requireWidget(__WIDGET__, 'scripts/main');
                     });
         });
     </script>

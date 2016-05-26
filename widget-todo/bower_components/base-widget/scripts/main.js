@@ -1,11 +1,31 @@
-define(function () {
+define(function () {    
+    var $ = require('jquery');
+    
     var reModule = /^dependency/g;
-
+    
+    function injectHTML(widget) {
+        var basicPath = widget.getOriginURI().replace('/index.html', '');
+        var staticPath = basicPath === '.' ? 'bower_components' : basicPath + '../../' ;
+        var isLocalEnvironment = staticPath === 'bower_components';
+        var modulesPath = isLocalEnvironment ?  '/' : '/features/[BBHOST]/';
+        var template = staticPath + modulesPath + widget.getPreference('main:module') + '/templates/' + widget.getPreference('main:template');
+        $.ajax({
+                url: template,
+                dataType: 'text'
+            })
+            .then(function (html) {
+                widget.body.innerHTML = html;
+            });
+    }
+    
     return function (widget, attributes, paths, name, execute) {
         var deps = [];
         var key;
         var modules = [];
         var modName;
+        
+        injectHTML(widget);
+        
         name = name || 'module_' + Math.random();
         for (key in attributes) {
             if (attributes.hasOwnProperty(key)) {
