@@ -21,11 +21,11 @@
             <property name="src">
                 <value type="string">$(itemRoot)/index.html</value>
             </property>
-            <property name="deps:core">
-                <value type="string"/>
+            <property name="dependency">
+                <value type="string">core</value>
             </property>
-            <property name="deps:module-todo">
-                <value type="string"/>
+            <property name="dependency">
+                <value type="string">module-todo</value>
             </property>
             <property name="main:module">
                 <value type="string">module-todo</value>
@@ -39,5 +39,25 @@
             <tag type="regular">registration</tag>
             <tag type="section">training</tag>
         </tags>
+        <!--<feature>-->
+            <!--<properties>-->
+                <!--<property name="dependency">-->
+                    <!--<value>core</value>-->
+                <!--</property>-->
+                <!--<property name="dependency">-->
+                    <!--<value>module-todo</value>-->
+                <!--</property>-->
+            <!--</properties>-->
+        <!--</feature>-->
+        <!--<feature>-->
+            <!--<properties>-->
+                <!--<property name="main:module">-->
+                    <!--<value>module-todo</value>-->
+                <!--</property>-->
+                <!--<property name="main:template">-->
+                    <!--<value>todo.html</value>-->
+                <!--</property>-->
+            <!--</properties>-->
+        <!--</feature>-->
     </widget>
 </catalog>

@@ -7,11 +7,11 @@
             <property name="title">
                 <value type="string">Widget Todo Extended</value>
             </property>
-            <property name="deps:core">
-                <value type="string"/>
+            <property name="dependency">
+                <value type="string">core</value>
             </property>
-            <property name="deps:module-todo-extended">
-                <value type="string"/>
+            <property name="dependency">
+                <value type="string">module-todo-extended</value>
             </property>
             <property name="main:module">
                 <value type="string">module-todo-extended</value>
@@ -20,10 +20,27 @@
                 <value type="string">todo.html</value>
             </property>
         </properties>
-        <tags>
-            <tag type="regular">classroom</tag>
-            <tag type="regular">registration</tag>
-            <tag type="section">training</tag>
-        </tags>
+        <!--<features>-->
+            <!--<feature>-->
+                <!--<properties>-->
+                    <!--<property name="dependency">-->
+                        <!--<value>core</value>-->
+                    <!--</property>-->
+                    <!--<property name="dependency">-->
+                        <!--<value>module-todo-extended</value>-->
+                    <!--</property>-->
+                <!--</properties>-->
+            <!--</feature>-->
+            <!--<feature>-->
+                <!--<properties>-->
+                    <!--<property name="main:module">-->
+                        <!--<value>module-todo-extended</value>-->
+                    <!--</property>-->
+                    <!--<property name="main:template">-->
+                        <!--<value>todo.html</value>-->
+                    <!--</property>-->
+                <!--</properties>-->
+            <!--</feature>-->
+        <!--</features>-->
     </widget>
 </catalog>
