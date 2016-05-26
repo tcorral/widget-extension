@@ -14,11 +14,8 @@
     <script type="text/javascript" src="bower_components/my-config/require.conf.js"></script>
     <script type="text/javascript">
         function injectHTML(widget) {
-            var launchpad = window.launchpad || {};
-            var staticPath = launchpad.staticRoot ? launchpad.staticRoot : 'bower_components';
-            var isSameStaticAndStaticRoot = staticPath === launchpad.staticRoot;
-            var modulesPath = isSameStaticAndStaticRoot ? '/features/[BBHOST]/' : '/';
-            var widgetsPath = isSameStaticAndStaticRoot ? '/widgets/[BBHOST]/' : '/';
+            var staticPath = 'bower_components';
+            var modulesPath = '/';
             var template = staticPath + modulesPath + widget.getPreference('main:module') + '/templates/' + widget.getPreference('main:template');
             $.ajax({
                         url: template,
@@ -30,17 +27,38 @@
         }
     </script>
     <script>
+        requirejs.config({
+            //By default load any module IDs from js/lib
+            baseUrl: '.',
+            paths: {
+                base: 'bower_components/base/dist/scripts',
+                mock: 'bower_components/mock/dist/scripts',
+                core: 'bower_components/core/dist/scripts',
+                lodash: 'bower_components/lodash/lodash.min',
+                moment: 'bower_components/moment/min/moment-with-locales.min',
+                'angular-dynamic-locale': 'bower_components/angular-dynamic-locale/dist/tmhDynamicLocale',
+                'angular-sanitize': 'bower_components/angular-sanitize/angular-sanitize.min',
+                'angular-resource': 'bower_components/angular-resource/angular-resource.min',
+                'angular-translate': 'bower_components/angular-translate/angular-translate.min'
+            },
+            packages: [
+                'base',
+                'mock',
+                'core'
+            ]
+        });
+
         require(['base', 'mock'], function (base, mock) {
             window.b$ = {portal: mock.Portal()};
             window.bd = mock.Bd();
-            window.launchpad = mock.launchpad;
+            //window.launchpad = mock.launchpad;
             window.gadgets = mock.gadgets;
 
             mock.Widget({
-                preferences: {
-                    test: 10
-                }
-            })
+                        preferences: {
+                            test: 10
+                        }
+                    })
                     .then(function (__WIDGET__) {
                         base.requireWidget(__WIDGET__, 'dist/scripts/main');
                         injectHTML(__WIDGET__)
