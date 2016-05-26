@@ -12,6 +12,23 @@
     <script>window.angular || document.write("<script src='bower_components/angular/angular.js'>\x3C/script>");</script>
     <script src="bower_components/config/requirejs.conf.js"></script>
     <script type="text/javascript" src="bower_components/my-config/require.conf.js"></script>
+    <script type="text/javascript">
+        function injectHTML(widget) {
+            var launchpad = window.launchpad || {};
+            var staticPath = launchpad.staticRoot ? launchpad.staticRoot : 'bower_components';
+            var isSameStaticAndStaticRoot = staticPath === launchpad.staticRoot;
+            var modulesPath = isSameStaticAndStaticRoot ? '/features/[BBHOST]/' : '/';
+            var widgetsPath = isSameStaticAndStaticRoot ? '/widgets/[BBHOST]/' : '/';
+            var template = staticPath + modulesPath + widget.getPreference('main:module') + '/templates/' + widget.getPreference('main:template');
+            $.ajax({
+                        url: template,
+                        dataType: 'text'
+                    })
+                    .then(function (html) {
+                        widget.body.innerHTML = html;
+                    });
+        }
+    </script>
     <script>
         require(['base', 'mock'], function (base, mock) {
             window.b$ = {portal: mock.Portal()};
@@ -26,6 +43,7 @@
             })
                     .then(function (__WIDGET__) {
                         base.requireWidget(__WIDGET__, 'dist/scripts/main');
+                        injectHTML(__WIDGET__)
                     });
         });
     </script>
@@ -33,6 +51,5 @@
 </head>
 
 <body class="extension-test">
-    <div ng-include="template"></div>
 </body>
 </html>

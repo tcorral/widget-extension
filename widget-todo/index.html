@@ -6,25 +6,25 @@
     <title>Blackboxed Widget</title>
     <link rel="stylesheet" href="dist/styles/base.css" type="text/css"/>
     <script type="text/javascript">
-        function injectHTML(node, widget) {
-            var launchpad = root.launchpad || {};
+        function injectHTML(widget) {
+            var launchpad = window.launchpad || {};
             var staticPath = launchpad.staticRoot ? launchpad.staticRoot : 'bower_components';
             var isSameStaticAndStaticRoot = staticPath === launchpad.staticRoot;
             var modulesPath = isSameStaticAndStaticRoot ? '/features/[BBHOST]/' : '/';
             var widgetsPath = isSameStaticAndStaticRoot ? '/widgets/[BBHOST]/' : '/';
             var template = staticPath + modulesPath + widget.getPreference('main:module') + '/templates/' + widget.getPreference('main:template');
             $.ajax({
-                        url: '',
+                        url: template,
                         dataType: 'text'
                     })
                     .then(function (html) {
-                        node.innerHTML = html;
+                        widget.body.innerHTML = html;
                     });
         }
     </script>
 </head>
 
-<body g:onload="requireWidget(__WIDGET__, 'dist/scripts/main');injectHTML(this, __WIDGET__);">
+<body g:onload="requireWidget(__WIDGET__, 'dist/scripts/main');injectHTML(__WIDGET__);">
 </body>
 
 </html>
