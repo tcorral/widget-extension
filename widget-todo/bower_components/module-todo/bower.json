@@ -20,7 +20,6 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "2.2.4",
-    "todo-lib": "../todo-lib"
+    "angular": "^1.5.0"
   }
 }

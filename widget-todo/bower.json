@@ -21,7 +21,8 @@
   ],
   "dependencies": {
     "widget-main": "*",
-    "module-todo": "*"
+    "module-todo": "*",
+    "module-todo-ui": "*"
   },
   "devDependencies": {
     "theme-default": "^1.0.23",

@@ -1,8 +1,5 @@
 define(function (require, exports, module) {
 
-    var $ = require('jquery');
-
-    //@ngInject
     function TodoController(filterFilter) {
         var ctrl = this;
         var processTodos = ctrl.processTodos = function (todos) {

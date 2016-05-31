@@ -8,16 +8,14 @@
         </header>
         <section class="main" ng-show="todoCtrl.todos.length" ng-cloak>
             <ul class="todo-list">
-                <li ng-repeat="todo in todoCtrl.todos track by $index" ng-class="{completed: todo.completed, editing: todo == todoCtrl.editedTodo}">
-                    <div class="view">
-                        <input class="toggle" type="checkbox" ng-checked="todo.completed" ng-click="todoCtrl.toggle(todo)">
-                        <label ng-dblclick="todoCtrl.editTodo(todo)">{{todo.title}}</label>
-                        <button class="destroy" ng-click="todoCtrl.removeTodo(todo)"></button>
-                    </div>
-                    <form ng-submit="todoCtrl.doneEditing(todo)">
-                        <input class="edit" ng-trim="false" ng-model="todo.title" ng-blur="todoCtrl.doneEditing(todo)" todo-escape="todoCtrl.revertEditing(todo)" todo-focus="todo == todoCtrl.editedTodo">
-                    </form>
-                </li>
+                <todo-tasks
+                        todos="todoCtrl.todos"
+                        editedTodo="todoCtrl.editedTodo"
+                        onToggle="todoCtrl.toggle(todo)"
+                        onEdit="todoCtrl.editTodo(todo)"
+                        onRemove="todoCtrl.removeTodo(todo)"
+                        onDoneEditing="todoCtrl.doneEditing(todo)"
+                        onRevertEditing="todoCtrl.revertEditing"></todo-tasks>
             </ul>
         </section>
     </section>

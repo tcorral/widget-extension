@@ -1,6 +1,6 @@
 define(function () {
 
-    var reModule = /^dependency/g;
+    var reModule = /^dependency:/g;
 
     function ajax(url, callback, data, x) {
         try {
@@ -62,8 +62,10 @@ define(function () {
                 if (attributes.hasOwnProperty(key)) {
                     if (reModule.test(attributes[key].name)) {
                         modName = attributes[key].name.replace(reModule, '');
+                        console.log(modName);
                         if (!(modName in paths)) {
                             modName = attributes[key].value;
+                            console.log('in paths');
                         }
                         if(modName) {
                             modules.push(modName);

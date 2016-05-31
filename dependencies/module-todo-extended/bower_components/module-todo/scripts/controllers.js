@@ -35,7 +35,7 @@ define(function (require, exports, module) {
 
         ctrl.editTodo = function (todo) {
             ctrl.editedTodo = todo;
-            originalTodo = jQuery.extend(true, {}, todo);
+            originalTodo = JSON.parse(JSON.stringify(todo));
             processTodos(ctrl.todos);
         };
 

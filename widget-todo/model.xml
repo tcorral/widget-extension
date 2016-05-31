@@ -10,6 +10,9 @@
             <property name="title">
                 <value type="string">Widget Todo Widget</value>
             </property>
+            <property name="dependency:module-todo-ui">
+                <value type="string"/>
+            </property>
             <property name="main:module">
                 <value type="string">module-todo</value>
             </property>
