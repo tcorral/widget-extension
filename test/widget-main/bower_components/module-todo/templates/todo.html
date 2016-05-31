@@ -1,0 +1,22 @@
+<div class="todo">
+    <section class="todoapp" ng-controller="TodoController as todoCtrl">
+        <header class="header">
+            <h1>todos</h1>
+            <form class="todo-form" ng-submit="todoCtrl.addTodo()">
+                <input class="new-todo" placeholder="What needs to be done?" ng-model="todoCtrl.newTodo" autofocus>
+            </form>
+        </header>
+        <section class="main" ng-show="todoCtrl.todos.length" ng-cloak>
+            <ul class="todo-list">
+                <todo-tasks
+                        todos="todoCtrl.todos"
+                        edited-todo="todoCtrl.editedTodo"
+                        on-toggle="todoCtrl.toggle(todo)"
+                        on-edit="todoCtrl.editTodo(todo)"
+                        on-remove="todoCtrl.removeTodo(todo)"
+                        on-done-editing="todoCtrl.doneEditing(todo)"
+                        on-revert-editing="todoCtrl.revertEditing"></todo-tasks>
+            </ul>
+        </section>
+    </section>
+</div>

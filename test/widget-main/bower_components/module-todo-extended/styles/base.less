@@ -1,0 +1,20 @@
+@import (multiple) '../../module-todo/styles/base';
+
+.todo-list {
+  overflow: hidden;
+  li {
+    width: 50%;
+    float: left;
+    height: 100px;
+    &:nth-child(2n+1) {
+      border-right: lightgray 1px solid;
+    }
+    label {
+      height: 100px;
+      line-height: 70px;
+    }
+    .destroy {
+      height: auto;
+    }
+  }
+}
