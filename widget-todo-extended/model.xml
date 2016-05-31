@@ -1,0 +1,18 @@
+<catalog>
+    <widget>
+        <name>widget-todo-extended</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <extendedItemName>widget-base</extendedItemName>
+        <properties>
+            <property name="title">
+                <value type="string">Widget Todo Extended</value>
+            </property>
+            <property name="main:module">
+                <value type="string">module-todo-extended</value>
+            </property>
+            <property name="main:template">
+                <value type="string">todo.html</value>
+            </property>
+        </properties>
+    </widget>
+</catalog>

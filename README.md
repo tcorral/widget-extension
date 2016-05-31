@@ -30,7 +30,7 @@ The idea of this widget extension is to create a widget that is totally blackbox
 - If a new dependency is required, the widget code should be modified so it's never blackboxed.
 
 ```
-Managing all this together requires do some changes in the way we work.
+Managing all that together requires do some changes in the way we work.
 ```
 
 ## What we want:
@@ -56,6 +56,9 @@ Base widget is pretty much a simple widget but with the responsability of:
 - Setup the main template.
 - Instanciate the module.
 
+### Base Widget NG:
+Base widget NG is the Angular implementation to start the widgets automatically.
+
 ### Widget:
 What widget requires:
 
@@ -63,6 +66,14 @@ What widget requires:
 - Create a model.xml 
 - An index.html with a ng-include directive that will load the template.
 
+### Blackboxed widget:
+- Input data:
+	- Dependencies are added in the model.xml and read by the base-widget.
+	- Main Module and main template are added in the model.xml.
+	
+- Output data:
+	- 
+	
 ## Run example:
 
 For developing locally without portal:
@@ -90,7 +101,7 @@ For developing locally without portal:
 
 ### Add more features extending the logic and changing the view.
 - Open the model.xml file.
-- Change the property name ```deps:module-todo``` to ```deps:module-test-extended```
+- Change the property name ```deps:module-todo``` to ```deps:module-todo-extended```
 - Reload the page and see what has changed.
 ![TODO Extended Landing Page](./documentation/todo-extended-landing.png)
 - Type the title of your task.

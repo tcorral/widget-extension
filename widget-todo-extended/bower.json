@@ -1,0 +1,26 @@
+{
+  "name": "widget-todo-extended",
+  "authors": [
+    "Tomas Corral <tomas@backbase.com>"
+  ],
+  "description": "Widget Todo Extended",
+  "main": "scripts/main.js",
+  "keywords": [
+    "extension",
+    "test"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "module-todo-extended": "*"
+  },
+  "devDependencies": {}
+}

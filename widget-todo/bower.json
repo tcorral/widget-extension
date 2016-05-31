@@ -1,0 +1,32 @@
+{
+  "name": "widget-todo",
+  "authors": [
+    "Tomas Corral <tomas@backbase.com>"
+  ],
+  "description": "Extension test",
+  "main": "scripts/main.js",
+  "keywords": [
+    "extension",
+    "test"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "module-todo": "*"
+  },
+  "devDependencies": {
+    "theme-default": "^1.0.23",
+    "mock": "^1.2.0",
+    "jquery": "^2.2.4",
+    "base": "^3.0.3",
+    "core": "^3.0.2"
+  }
+}
