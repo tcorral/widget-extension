@@ -18,9 +18,8 @@
             </property>
         </properties>
         <tags>
-            <tag type="regular">classroom</tag>
-            <tag type="regular">registration</tag>
-            <tag type="section">training</tag>
+            <tag type="regular">todo</tag>
+            <tag type="section">extension</tag>
         </tags>
         <!--<feature>-->
             <!--<properties>-->

@@ -1,0 +1,26 @@
+{
+  "name": "module-todo-extended",
+  "authors": [
+    "Tomas Corral <tomas@backbase.com>"
+  ],
+  "description": "Module Todo Extended",
+  "main": "scripts/main.js",
+  "keywords": [
+    "base",
+    "test"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "module-todo": "../module-todo"
+  }
+}

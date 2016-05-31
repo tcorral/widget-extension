@@ -1,0 +1,26 @@
+{
+  "name": "base-widget-ng",
+  "authors": [
+    "Tomas Corral <tomas@backbase.com>"
+  ],
+  "description": "Extension test",
+  "main": "scripts/main.js",
+  "keywords": [
+    "base",
+    "test"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "base-widget": "*",
+    "angular": "^1.5.0"
+  }
+}

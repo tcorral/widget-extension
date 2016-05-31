@@ -14,5 +14,10 @@
                 <value type="string">todo.html</value>
             </property>
         </properties>
+        <tags>
+            <tag type="regular">extended</tag>
+            <tag type="regular">todo</tag>
+            <tag type="section">extension</tag>
+        </tags>
     </widget>
 </catalog>
