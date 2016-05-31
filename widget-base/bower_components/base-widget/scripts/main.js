@@ -1,31 +1,44 @@
-define(function () {    
-    var $ = require('jquery');
-    
+define(function () {
+
     var reModule = /^dependency/g;
     
+    function ajax(url, callback, data, x) {
+        try {
+            x = new(this.XMLHttpRequest || ActiveXObject)('MSXML2.XMLHTTP.3.0');
+            x.open(data ? 'POST' : 'GET', url, 1);
+            x.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+            x.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            x.onreadystatechange = function () {
+                x.readyState > 3 && callback && callback(x.responseText, x);
+            };
+            x.send(data)
+        } catch (e) {
+            window.console && console.log(e);
+        }
+    }
+    
     function injectHTML(widget) {
-        var basicPath = widget.getOriginURI().replace('/index.html', '');
-        var staticPath = basicPath === '.' ? 'bower_components' : basicPath + '../../' ;
+        var staticStr = 'static';
+        var path = widget.getOriginURI();
+        var posStaticInPath = path.indexOf(staticStr);
+        var basicPath = path.substr(0, posStaticInPath + staticStr.length);
+        var staticPath = basicPath === '.' ? 'bower_components' : basicPath;
         var isLocalEnvironment = staticPath === 'bower_components';
         var modulesPath = isLocalEnvironment ?  '/' : '/features/[BBHOST]/';
         var template = staticPath + modulesPath + widget.getPreference('main:module') + '/templates/' + widget.getPreference('main:template');
-        $.ajax({
-                url: template,
-                dataType: 'text'
-            })
-            .then(function (html) {
-                widget.body.innerHTML = html;
-            });
+        ajax(template, function (html) {
+            widget.body.innerHTML = html;
+        });
     }
-    
+
     return function (widget, attributes, paths, name, execute) {
         var deps = [];
         var key;
         var modules = [];
         var modName;
-        
+
         injectHTML(widget);
-        
+
         name = name || 'module_' + Math.random();
         for (key in attributes) {
             if (attributes.hasOwnProperty(key)) {
@@ -40,6 +53,9 @@ define(function () {
                 }
             }
         }
+        
+        modules.push(widget.getPreference('main:module'));
+        
         if (modules.length === 0) {
             execute(name, widget, deps);
         } else {

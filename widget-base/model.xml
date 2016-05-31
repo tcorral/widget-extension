@@ -1,26 +1,30 @@
 <catalog>
     <widget>
-        <name>widget-todo</name>
+        <name>widget-base</name>
         <contextItemName>[BBHOST]</contextItemName>
-        <extendedItemName>widget-base</extendedItemName>
         <properties>
             <property name="TemplateName">
                 <value type="string">Standard_Widget</value>
             </property>
             <property name="title">
-                <value type="string">Widget Todo Widget</value>
+                <value type="string">Widget Base</value>
             </property>
-            <property name="main:module">
-                <value type="string">module-todo</value>
+            <property name="Description">
+                <value type="String" />
             </property>
-            <property name="main:template">
-                <value type="string">todo.html</value>
+            <property name="thumbnailUrl">
+                <value type="string">$(itemRoot)/icon.png</value>
+            </property>
+            <property name="widgetChrome">
+                <value type="string">$(contextRoot)/static/backbase.com.2012.aurora/html/chromes/widget_none.html</value>
+            </property>
+            <property name="src">
+                <value type="string">$(itemRoot)/index.html</value>
             </property>
         </properties>
         <tags>
-            <tag type="regular">classroom</tag>
-            <tag type="regular">registration</tag>
-            <tag type="section">training</tag>
+            <tag type="regular">base</tag>
+            <tag type="section">main</tag>
         </tags>
         <!--<feature>-->
             <!--<properties>-->
