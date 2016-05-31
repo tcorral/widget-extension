@@ -85,6 +85,10 @@ What a custom widget requires:
 - Create a zip file containing both.
 - Import that zip file in the portal.
 	
+	
+### Widget Architecture Diagram:
+
+![Widget Architecture Diagram](./documentation/widget-architecture-diagram.png)
 
 For developing locally without portal:
 ---------------------------------------
