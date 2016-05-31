@@ -64,11 +64,15 @@ Widget Main is the widget that all the rest of widgets will extend from.
 
 #### Blackboxed widget:
 Widget Main can be considered blackboxed because:
-- The code of Widget Main never should be modified and it's not needed because there is no logic, view or style associated to it.
+- The code of Widget Main never will require to be modified because there is no logic, view or style in it.
 - Uses the facade pattern to manage all the dependencies and change the behaviour and presentation.
 
 * Input:
     * The model.xml contains what are the required dependencies for behaviour and presentation.
+        * Component modules
+        * Behaviour modules
+        * Model modules
+        * Presentation.
 * Output:
     * A functional widget.
 
@@ -81,7 +85,6 @@ What a custom widget requires:
 - Create a zip file containing both.
 - Import that zip file in the portal.
 	
-## Run example:
 
 For developing locally without portal:
 ---------------------------------------
