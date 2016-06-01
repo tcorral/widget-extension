@@ -105,7 +105,7 @@ For developing locally without portal:
 
 ```
 Widget Main is a widget without any specific behaviour or view but with its own entity.
-If it were an X-men it would be Mystique.
+If it were an X-Men it would be Mystique.
 ```
 
 1. Open ```http://(server-domain)[:port]/test/widget-main```
