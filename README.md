@@ -75,6 +75,8 @@ Widget Main can be considered blackboxed because:
         * Presentation.
 * Output:
     * A functional widget.
+    * More preferences if needed in the editor.
+    * Manage/Modify permissions of availability for preferences.
 
 ### Custom Widget:
 What a custom widget requires:
