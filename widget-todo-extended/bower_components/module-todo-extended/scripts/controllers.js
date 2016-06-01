@@ -2,7 +2,6 @@ define(function (require, exports, module) {
 
     var TodoController = require('../../module-todo/scripts/controllers').TodoController;
 
-    //@ngInject
     function TodoControllerExt(filterFilter, $scope, $location) {
         var ctrl = this;
         TodoController.apply(this, arguments);
